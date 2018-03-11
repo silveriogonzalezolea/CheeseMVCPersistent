@@ -18,5 +18,9 @@
   <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
   <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
 </ItemGroup>
+  
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+  <Exec Command="dotnet --version&#xD;&#xA;" />
+</Target>
 
 </Project>
